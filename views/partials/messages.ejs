@@ -1,0 +1,57 @@
+<style>
+  .message{
+    border-radius: 15px;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #d1ecf1;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #64abe3;
+  display: block;
+  position: relative;
+  width: 70%
+    
+  }
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+
+.close:hover {background: #f6f5f5;
+color:#1687a7}
+</style>
+ <% if(typeof errors  != 'undefined') { %>
+  <% errors.forEach(function(error){ %>
+    <div class="message alert alert-warning alert-dismissible fade show" role="alert">
+      <%= error.msg %>
+      
+        <span aria-hidden="true" class="close">&times;</span>
+      
+    </div>
+<%  }); %>
+<% } %>
+<% if(typeof errors2  != 'undefined') { %>
+  <% errors2.forEach(function(error2){ %>
+    <div class="message alert alert-warning alert-dismissible fade show" role="alert">
+      <%= error2.msg %>
+      
+        <span aria-hidden="true" class="close">&times;</span>
+      
+    </div>
+<%  }); %>
+<% } %>
+
+<script>
+  var closebtns = document.getElementsByClassName("close");
+  var i;
+  
+  for (i = 0; i < closebtns.length; i++) {
+    closebtns[i].addEventListener("click", function() {
+      this.parentElement.style.display = 'none';
+    });
+  }
+  </script>

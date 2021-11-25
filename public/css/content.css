@@ -1,0 +1,310 @@
+@import url(https://allfont.net/allfont.css?fonts=droid-sans-mono);
+:root {
+    --lightblue: #1687a7;
+    --darkblue: #276678; 
+    --skyblue: #d3e0ea;
+    --bluishgrey: #f6f5f5;
+  }
+
+  .sidenav {
+    position: absolute;
+    margin-top: 100px;
+    height: 22.5%;
+    width: 300px;
+    z-index: 1;
+    top: 0px;
+    left: 35px;
+    background-color: var(--skyblue);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:0;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    button.dropdown-btn{
+    display: inline;
+    margin-right: 0 !important;
+    background-color: var(--skyblue);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    border: none !important;
+    outline: none !important;
+    }
+    
+    /* Style the sidenav links and the dropdown button */
+    .sidenav a, .dropdown-btn {
+    width: 300px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    color: var(--darkblue);
+    display: block;
+    border: none;
+    background-color: var(--skyblue);
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    overflow-y:hidden;
+    width:100%;
+    }
+    
+    /* On mouse-over */
+    .sidenav a:hover, .dropdown-btn:hover {
+     background-color: rgba(246, 245, 245, 0.7);
+    }
+
+.ftco-content{
+    margin: 100px 70px 100px 400px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2.page-title{
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #444444;
+    width: 100%;
+}
+
+.ftco-content .links{
+    display: flex;
+    justify-content: center;
+}
+
+.ftco-content .links .btn-links{
+    outline: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 15px 10px;
+    color: var(--darkblue);
+    background-color: transparent;
+    border: 2px solid var(--darkblue);
+    border-radius: 5px;
+}
+
+.ftco-content .links .btn-links:hover{
+    color: var(--skyblue);
+    background-color: var(--darkblue);
+    transition: ease-in-out 0.6s;
+}
+
+.ftco-content .content{
+    padding: 5px 0 5px 0;
+    color: #666666;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-character;
+}
+
+h3.subtitle{
+    padding-top: 8px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    color: #444444;
+    width: 100%;
+}
+
+h4.subtitle{
+    padding-top: 8px;
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    color: #444444;
+    width: 100%;
+}
+
+.ftco-content .content-bulletlist{
+    list-style-type: disc;
+    list-style: outside;
+    padding: 0 40px;
+    color: #666666;
+    font-size: 18px;
+}
+
+.ftco-content .content-numberlist{
+    list-style-type: lower-roman;
+    list-style: outside;
+    padding: 0 40px;
+    color: #666666;
+    font-size: 18px;
+}
+
+.ftco-content .content-nolist{
+    list-style-type: none;
+    color: #666666;
+    font-size: 18px;
+}
+
+.ftco-content .content-nolist li{
+    padding-bottom: 5px;
+}
+
+.ftco-content .content-bulletlist .topic{
+    display: inline;
+    font-weight: 600;
+}
+
+.ftco-content .code-frame{
+    padding: 20px;
+    background-color: #e0dcdc;
+    border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.ftco-content .code{
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(40,44,52);
+    margin-bottom: 0;
+}
+
+.ftco-content .code span{
+    font-family: 'Courier New', monospace;
+}
+
+span.function{
+    color: #45b6fe;
+  }
+  
+  span.brackets{
+    color: #f4a460;
+  }
+  
+  span.disptxt{
+    color: #80c904;
+  }
+  
+  span.comment{
+    color: #eeeeee;
+  }
+  
+  span.filename{
+    color: #ed2939;
+  }
+
+.ftco-content .page-links{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ftco-content .page-links .btn-pglinks{
+    outline: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: var(--darkblue);
+    background-color: transparent;
+    border: none;
+}
+
+.ftco-content .page-links .btn-pglinks:hover{
+    color: var(--skyblue);
+    background-color: var(--lightblue);
+    transition: ease-in-out 0.6s;
+}
+
+.ftco-content .page-links .btn-pglinks i{
+    padding: 3px;
+}
+
+hr{
+    margin: 5px 0 !important;
+}
+
+.ftco-content .content-table{
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.ftco-content .content-table,tr,th,td{
+    border: 1px solid var(--darkblue);
+    padding: 10px;
+    font-size: 18px;
+    color: #666666;
+}
+
+.ftco-content .content-table th{
+    background-color: var(--skyblue);
+    color: #555555;
+    text-align: center;
+}
+
+.ftco-content .content-table .heading{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+@media(min-width:768px) and (max-width:800px){
+    .sidenav{
+        display: none;
+    }
+
+    .ftco-content{
+        width: 80%;
+        margin: 10%;
+    }
+}
+
+@media(min-width:501px) and (max-width:767px){
+    .navigation{
+        display: none;
+    }
+    .ftco-content{
+        width: 80%;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+    .ftco-content .links{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ftco-content .links .btn-links{
+        outline: none !important;
+        font-weight: normal;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 1% 1%;
+        margin: 1% 1%;
+        color: var(--darkblue);
+        background-color: transparent;
+        border: 1px solid var(--darkblue);
+        border-radius: 5px;
+    }
+}
+
+@media(min-width:360px) and (max-width:500px){
+    .sidenav{
+        display: none;
+    }
+
+    .ftco-content{
+        width: 80%;
+        margin: auto;
+        margin-top: 20%;
+    }
+
+    .ftco-content .links{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .ftco-content .links .btn-links{
+        outline: none !important;
+        font-weight: normal;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 1% 1%;
+        margin: 1% 1%;
+        color: var(--darkblue);
+        background-color: transparent;
+        border: 1px solid var(--darkblue);
+        border-radius: 5px;
+    }
+}

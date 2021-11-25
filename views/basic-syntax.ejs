@@ -1,0 +1,348 @@
+<%- include("partials/header") -%>
+<%- include("partials/side-nav") -%>
+    
+    <section class="ftco-content">
+        <h2 class="page-title">Python - Basic Syntax</h2>
+        <nav class="links">
+            <button class="btn-links" onclick="pdf_con()">PDF Version</button>
+            <button class="btn-links" onclick="location.href='/variable-type'">Variable Type</button>
+            <button class="btn-links" onclick="location.href='/basic-operator'">Basic Operator</button>
+        </nav>
+        <p class="content">
+            The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages
+        </p>
+        
+        <h3 class="subtitle">First Python Program</h3>
+        <p class="content">
+            Let us execute programs in different modes of programming.
+        </p>
+        <h4> Interactive Mode Programming</h4>   
+        <p class="content">
+            Invoking the interpreter without passing a script file as a parameter brings up the following prompt −     
+        </p>
+        
+        <aside class="code-frame">
+            <p class="code">
+                <span class=""> $ python</span><br> 
+                <span class="filename"> Python</span><span class="filename"> 2.4.3</span> <span class="brackets">(</span><span class="comment">#1, Nov 11 2010, 13:34:43</span><span class="brackets">)</span><br>
+                <span class="disptxt">[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2</span><br>
+                <span class="disptxt"> Type "help", "copyright", "credits" or "license" for more information.</span><br>
+                <span class="filename"> >>> </span>
+                   
+            </p>
+        </aside>
+        <p class="content">
+            Type the following text at the Python prompt and press the Enter −
+        </p>
+        <aside class="code-frame">
+            <p class="code">
+                <span class="filename">>>> </span><span class="function">print</span> <span class="disptxt">"Hello, Python!"</span><br> 
+                </span>
+                   
+            </p>
+        </aside>
+        <p class="content">
+            If you are running new version of Python, then you would need to use print statement with parenthesis as in print ("Hello, Python!");. However in Python version 2.4.3, this produces the following result −
+        </p>
+        <aside class="code-frame">
+                <span>"Hello, Python!"</span><br> 
+                
+        </aside>
+        <h4>Script Mode Programming</h4>
+        <p class="content">
+            Invoking the interpreter with a script parameter begins execution of the script and continues until the script is finished. When the script is finished, the interpreter is no longer active.
+        </p>
+        <p class="content">
+            Let us write a simple Python program in a script. Python files have extension .py. Type the following source code in a test.py file −
+        </p>
+        <aside class="code-frame">
+            <p class="code">
+                <span class="function">print </span><span class="disptxt">"Hello, Python!"</span><br> 
+                </span>
+                   
+            </p>
+        </aside>
+        <p class="content">
+            We assume that you have Python interpreter available in /usr/bin directory. Now, try to run this program as follows −
+        </p>
+        <aside class="code-frame">
+            <p class="code">
+                <span class="function">$ chmod +x test.py </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="brackets"> # This is to make file executable </span><br>
+                <span class="function">$./test.py</span>
+                </span>
+                   
+            </p>
+        </aside>
+        <p class="content">
+            This produces the following result −
+        </p>
+        <aside class="code-frame">
+            <!-- <p class="code"> -->
+                <span>"Hello, Python!"</span><br> 
+                <!-- </span>
+                   
+            </p> -->
+        </aside>
+        <h4>Python Identifiers</h4>
+        <p class="content">
+            A Python identifier is a name used to identify a variable, function, class, module or other object. An identifier starts with a letter A to Z or a to z or an underscore (_) followed by zero or more letters, underscores and digits (0 to 9).
+        </p>
+        <p class="content">
+            Python does not allow punctuation characters such as @, $, and % within identifiers. Python is a case sensitive programming language. Thus, <b>Manpower</b> and <b> manpower</b> are two different identifiers in Python.
+        </p>
+        <p class="content">Here are naming conventions for Python identifiers −</p>
+        <ul class="content-bulletlist">
+            <li>Class names start with an uppercase letter. All other identifiers start with a lowercase letter.</li>
+            <li>Starting an identifier with a single leading underscore indicates that the identifier is private.</li>
+            <li>Starting an identifier with two leading underscores indicates a strongly private identifier.</li>
+            <li>If the identifier also ends with two trailing underscores, the identifier is a language-defined special name.</li>
+            
+        </ul>
+   <h4>Reserved Words</h4>
+   <p class="content">
+    The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
+</p>
+<table class="content-table">
+    
+    <tr  class="tr">
+        <td class ="td">and</td>
+        <td class ="td">exec</td>
+        <td class ="td">not</td>
+     
+    </tr>
+    <tr  class="tr">
+        <td class ="td">assert</td>
+        <td class ="td">finally</td>
+        <td class ="td">or</td>
+     
+    </tr>
+    <tr  class="tr">
+        <td class ="td">break</td>
+        <td class ="td">for</td>
+        <td class ="td">pass</td>
+     
+    </tr>
+    <tr  class="tr">
+        <td class ="td">class</td>
+        <td class ="td">from</td>
+        <td class ="td">print</td>
+     
+    </tr>
+    <tr  class="tr">
+        <td class ="td">continue</td>
+        <td class ="td">global</td>
+        <td class ="td">raise</td>
+     
+    </tr>
+   
+   
+</table> 
+<h4>Lines and Indentation</h4>
+<p class="content">
+    Python provides no braces to indicate blocks of code for class and function definitions or flow control. Blocks of code are denoted by line indentation, which is rigidly enforced.
+</p>
+<p class="content">
+    The number of spaces in the indentation is variable, but all statements within the block must be indented the same amount. For example −
+</p>
+<aside class="code-frame">
+        <span class="">if True:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print "True"<br>
+         else:<br>
+         &nbsp;&nbsp;&nbsp;&nbsp;print "False"
+        </span>
+</aside>
+<p class="content">
+    However, the following block generates an error −
+</p>
+<aside class="code-frame">
+    <p class="code">
+        <span class="function">if True:</span><br>
+        <span class="function">  print </span><span class="disptxt">"Answer" </span><br>
+        <span class="function">  print </span> <span class="disptxt">"True" </span><br>
+        <span class="function">  else:</span><br> 
+        <span class="function"> print</span> <span class="disptxt"> "Answer" </span><br>
+        <span class="function"> print </span><span class="disptxt">"False" </span><br>
+    </p>
+</aside>
+<p class="content">
+    Thus, in Python all the continuous lines indented with same number of spaces would form a block. The following example has various statement blocks −
+</p>
+
+<p class="content">
+   <b>Note</b> − Do not try to understand the logic at this point of time. Just make sure you understood various blocks even if they are without braces.
+</p>
+<aside class="code-frame">
+    <p class="code">
+       <span class="comment">#!/usr/bin/python</span><br><br> 
+
+       <span class="function"> import </span> <span class="filename" >sys</span><br><br>
+
+        <span class="function">try </span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># open file stream</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="filename">file <span class="brackets">=</span> <span class="function">open</span><span class="brackets">(</span><span class="filename">file_name, </span><span class="disptxt">"w"</span> <span class="brackets">)</span><br> 
+        <span class="function">except</span> <span class="filename">IOError:</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span> <span class="disptxt">"There was an error writing to"</span><span class="">, file_name</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">sys.</span><span class="function">exit</span><span class="brackets">()</span><br>
+        <span class="function" >print </span> <span class="disptxt">"Enter "</span><span class=""> , file_finish,</span><br>
+        <span class="function" >print </span> <span class="disptxt">" When Finished "</span><br>
+        <span class="function">while</span> <span class="">file_text </span><span class="brackets">!=</span> <span class=""> file_finish:</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file_text</span> <span class="brackets">=</span> <span class="function">raw_input</span><span class="brackets">(</span><span class="disptxt">"Enter text: "</span><span class="brackets">)</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">if</span> <span class="">file_text </span><span class="brackets">==</span><span class=""> file_finish:</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># close the file</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file.</span><span class="function">close</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">break</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file.</span><span class="function">write</span><span class="brackets">(</span><span class="">file_text</span><span class="brackets">)</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file.</span><span class="function">write</span><span class="brackets">(</span><span class="disptxt">"\n"</span><span class="brackets">)</span><br>
+        <span class="">file.</span><span class="function">close</span><span class="brackets">()</span><br>
+        <span class="">file_name </span><span class="brackets">=</span><span class="function"> raw_input</span><span class="brackets">(</span><span class="disptxt">"Enter filename: "</span><span class="brackets">)</span><br>
+        <span class="function">if</span> <span class="function">len</span><span class="brackets">(</span><span class="">file_name</span><span class="brackets">)</span> <span class="brackets">==</span> <span class="">0:</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span> <span class="disptxt">"Next time please enter something"</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">sys.</span><span class="function">exit</span><span class="brackets">()</span><br>
+        <span class="function">try</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">file</span> = <span class="function">open</span><span class="brackets">(</span><span class="">file_name, </span><span class="disptxt">"r"</span><span class="brackets">)</span><br>
+        <span class="function">except</span><span class="filename"> IOError:</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="function">print</span> <span class="disptxt">"There was an error reading file"</span><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="">sys.</span><span class="function">exit</span><span class="brackets">()</span><br>
+        <span class="">file_text</span> <span class="brackets">=</span> <span class="">file.</span><span class="function">read</span><span class="brackets">()</span><br>
+        <span class="">file.</span><span class="function">close</span><span class="brackets">()</span><br>
+        <span class="function">print</span> <span class="">file_text</span><br>
+    </p>
+</aside>
+<h4>Multi-Line Statements</h4>
+<p class="content">
+    Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example −
+</p>
+<aside class="code-frame">        
+       <span class=""> total = item_one + \</span><br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> item_two + \</span><br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> item_three</span><br>
+</aside>
+<p class="content">
+    Statements contained within the [], {}, or () brackets do not need to use the line continuation character. For example −
+</p>
+<aside class="code-frame">        
+       <span class=""> days = ['Monday', 'Tuesday', 'Wednesday',</span><br>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=""> 'Thursday', 'Friday']</span><br>
+</aside>
+<h4>Quotation in Python</h4>
+<p class="content">
+    Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
+</p>
+<p class="content">
+    The triple quotes are used to span the string across multiple lines. For example, all the following are legal −
+</p>
+<aside class="code-frame">
+       <span class=""> word = 'word'</span><br>
+       <span class=""> sentence = "This is a sentence."</span><br>
+       <span class="">paragraph = """This is a paragraph. It is</span><br>
+       <span class="">made up of multiple lines and sentences."""</span><br>
+</aside>
+<h4>Comments in Python</h4>
+<p class="content">
+    A hash sign (#) that is not inside a string literal begins a comment. All characters after the # and up to the end of the physical line are part of the comment and the Python interpreter ignores them.
+</p>
+<aside class="code-frame">
+    <p class="code">   
+<span class="comment"> #!/usr/bin/python</span><br><br>
+<span class="comment"> # First comment</span><br>
+        <span class="function">print </span><span class="disptxt">"Hello, Python!" </span><span class="comment"># second comment</span><br>           
+    </p>
+</aside>
+<p class="content">
+    This produces the following result −
+</p>
+<aside class="code-frame">
+       <span class="">Hello, Python!</span><br>
+</aside>
+<p class="content">
+    You can type a comment on the same line after a statement or expression −
+</p>
+<aside class="code-frame">        
+       <span class="">name = "Madisetti" # This is again comment</span><br>
+</aside>
+<p class="content">
+    You can comment multiple lines as follows −
+</p>
+<aside class="code-frame">        
+       <span class=""># This is a comment.</span><br>
+       <span class=""># This is a comment, too.</span><br>
+       <span class=""># This is a comment, too.</span><br>
+       <span class=""># I said that already.</span><br>
+</aside>
+<p class="content">
+    Following triple-quoted string is also ignored by Python interpreter and can be used as a multiline comments:
+</p>
+<aside class="code-frame">        
+       <span class="">'''</span><br>
+       <span class="">This is a multiline</span><br>
+       <span class="">comment.</span><br>
+       <span class="">'''</span><br>
+</aside>
+<h4>Using Blank Lines</h4>
+<p class="content">
+    A line containing only whitespace, possibly with a comment, is known as a blank line and Python totally ignores it.
+</p>
+<p class="content">
+    In an interactive interpreter session, you must enter an empty physical line to terminate a multiline statement.
+</p>
+<h4>Waiting for the User</h4>
+<p class="content">
+    The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
+</p>
+<aside class="code-frame">
+    <p class="code">
+       <span class="comment">#!/usr/bin/python</span><br><br>    
+       <span class="function">raw_input</span><span class="brackets">(</span><span class="disptxt">"\n\nPress the enter key to exit."</span><span class="brackets">)</span><br>
+    </p></aside>
+<p class="content">
+    Here, "\n\n" is used to create two new lines before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
+</p>
+<h4>Multiple Statements on a Single Line</h4>
+<p class="content">
+    The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon −
+</p>
+<aside class="code-frame">
+    <p class="code">
+       <span class="function">import </span><span class="filename">sys; x </span><span class="brackets">=</span> <span class="disptxt">'foo'</span><span class="comment">;</span> <span class="filename">sys</span><span class="brackets">.</span><span class="filename">stdout.</span><span class="function">write</span><span class="brackets">(</span><span class="">x</span> <span class="brackets">+</span> <span class="disptxt"> '\n'</span> <span class="brackets">)</span> <br>
+    </p></aside>
+<h4>Multiple Statement Groups as Suites</h4>
+
+<p class="content">
+    A group of individual statements, which make a single code block are called suites in Python. Compound or complex statements, such as if, while, def, and class require a header line and a suite.
+</p>
+<p class="content">
+    Header lines begin the statement (with the keyword) and terminate with a colon ( : ) and are followed by one or more lines which make up the suite. For example −
+</p>
+<aside class="code-frame">
+       <span class="">if expression : <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;suite<br>
+     elif expression : <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;suite <br>
+     else : <br>
+     &nbsp;&nbsp;&nbsp;&nbsp;   suite</span><br>
+</aside>
+<h4>Command Line Arguments</h4>
+<p class="content">
+    Many programs can be run to provide you with some basic information about how they should be run. Python enables you to do this with -h −
+</p>
+<aside class="code-frame">
+    <p class="code">
+        <span class="filename">$ python -h</span><br>
+        <span class="filename">usage</span><span class="brackets">:</span><span class="filename"> python</span> <span class="brackets">[</span> <span class="filename">option</span><span class="brackets"> ] ... [ </span> <span class="filename">-c cmd</span> <span class="brackets">|</span> <span class="filename">-m mod</span> <span class="brackets">|</span> <span class="filename">file </span><span class="brackets"> | -] [</span> <span class="filename">arg</span><span class="brackets">] ...</span><br>
+        <span class="filename">Options</span> <span class="function">and</span> <span class="filename">arguments </span><span class="brackets">(</span><span class="function">and</span> <span class="filename">corresponding environment variables</span><span class="brackets">) :</span><br>
+        <span class="filename">-c cmd </span>: <span class="filename">program passed</span> <span class="function">   in as string </span><span class="brackets">(</span> <span class="filename">terminates option list</span><span class="brackets">)</span><br>
+        <span class="filename">-d </span>: <span class="filename">debug output</span><span class="function">from</span><span class="filename"> parser </span><span class="brackets">(</span><span class="filename">also PYTHONDEBUG<span class="brackets">=</span>x</span><span class="brackets">)</span><br>
+        <span class="filename">-E    </span> : <span class="filename">environment variables</span> <span class="brackets">(</span><span class="filename">such </span><span class="function">as</span> <span class="filename">PYTHONPATH</span><span class="brackets">)</span><br>
+        <span class="filename">-h</span>     : <span class="function"> print this</span><span class="filename"> help message</span> <span class="function">and exit</span><br><br>
+        <span class="brackets">[</span> <span class="filename"> etc. </span> <span class="brackets">]</span><br>
+    </p></aside>
+<p class="content">
+    You can also program your script in such a way that it should accept various options. Command Line Arguments is an advanced topic and should be studied a bit later once you have gone through rest of the Python concepts.
+</p>
+<nav class="page-links">
+    <button class="btn-pglinks" onclick="location.href='/environment-setup'"><i class="fa fa-angle-left"></i>Previous Page</button>
+    <button class="btn-pglinks">PDF Preview</button>
+    <button class="btn-pglinks" onclick="location.href='/variable-type'">Next Page<i class="fa fa-angle-right"></i></button>
+</nav>
+    </section>
+<%- include ("partials/footer") -%>

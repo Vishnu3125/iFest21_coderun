@@ -1,0 +1,17 @@
+{
+    "short_name": "CodeRun",
+    "name": "CodeRun - Programming Language learning portal",
+    "icons": [
+        {
+            "src": "images/logo1.png",
+            "type": "image/png",
+            "sizes": "144x144",
+            "purpose": "any"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#3367D6"
+}

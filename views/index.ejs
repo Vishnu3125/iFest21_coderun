@@ -1,0 +1,53 @@
+<%- include("partials/header") -%>
+
+<section class="homepage js-fullheight">
+    <div class="slider-item js-fullheight" style="background-image: url(images/about.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row slider-text js-fullheight justify-content-center align-items-center"
+                data-scrollax-parent="true">
+
+                <div class="col-md-12 col-sm-12 text-center ftco-animate">
+                    <span class="subheading">CodeRun</span>
+                    <h1 class="mb-4">Learn Programming with us!</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<section class="python">
+    <div class="grid-container">
+        <div class="grid-item text-content">
+            <h1>PYTHON</h1>
+            <p>The popular programming language</p>
+            <button class="btn-learn" onclick="location.href='/basic-syntax'">Learn Python</button><br>
+            <button class="btn-about" onclick="location.href='/introduction'">Introduction to Python</button>
+        </div>
+        <div class="grid-item code-content">
+            <aside class="outer-border">
+                Python example:
+                <aside class="code">
+                    <span class="comment"># Python program to check if the number is an Armstrong number or not</span><br>
+                    <br>
+                    <span class="function">num</span> = <span class="function">int</span><span class="brackets">(</span><span class="function">input</span><span class="brackets">(</span><span class="disptxt">
+                    "Enter a number: "</span><span class="brackets">))</span>
+                    <br><br>
+                    <span class="function">sum</span> = <span class="filename">0</span> <br>
+                    <span class="function">temp</span> = <span class="function">num</span><br>
+                    <span class="function">while temp</span> > <span class="filename">0</span>:<br>
+                    <span class="function">digit</span> = <span class="function">temp</span> % <span class="filename">10</span><br>
+                    <span class="function">sum</span> += <span class="function">digit</span> ** <span class="filename">3</span><br>
+                    <span class="function">temp</span> //= <span class="filename">10</span><br><br>
+                    <span class="function">if num</span> == <span class="function">sum</span>:<br>
+                    <span class="function">print</span><span class="brackets">(</span><span class="function">num</span>,<span class="disptxt">"is an Armstrong number"</span><span class="brackets">)</span><br>
+                    <span class="function">else</span>:<br>
+                    <span class="function">print</span><span class="brackets">(</span><span class="function">num</span>,<span class="disptxt">"is not an Armstrong number"</span><span class="brackets">)</span> 
+                    </aside>
+                    <button class="btn-try" onclick="location.href='/editor'">Try this code!</button>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<%- include("partials/footer") -%>

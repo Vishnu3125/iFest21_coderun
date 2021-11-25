@@ -1,0 +1,114 @@
+    <footer class="ftco-footer ftco-bg-dark ftco-section" id="contact">
+      <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">CodeRun</h2>
+                    <p>
+                        A platform where coders and non-coders can learn programming easily with practice.
+                    </p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-github"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Python - Basic</h2>
+                    <ul class="list-unstyled open-hours">
+                        <li><a href="/basic-syntax">Basic Syntax</a></li>
+                        <li><a href="/variable-type">Variable types</a></li>
+                        <li><a href="/basic-operator">Basic Operators</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Python - Intermediate</h2>
+                  <ul class="list-unstyled open-hours">
+                      <li><a href="/decision-making">Decision Making</a></li>
+                      <li><a href="/loops">Loops</a></li>
+                      <li><a href="/numbers">Numbers</a></li>
+                      <li><a href="/strings">Strings</a></li>
+                      <li><a href="/lists">Lists</a></li>
+                      <li><a href="/tuples">Tuples</a></li>
+                      <li><a href="/dictionary">Dictionary</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Python - Advanced</h2>
+                <ul class="list-unstyled open-hours">
+                    <li><a href="/date-time">Date & Time</a></li>
+                    <li><a href="/functions">Functions</a></li>
+                    <li><a href="/modules">Modules</a></li>
+                    <li><a href="/fileio">File I/O</a></li>
+                    <li><a href="/exceptions">Exceptions</a></li>
+                    <li><a href="/class-objects">Class & Object</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+
+        $(".carousel").owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+          0:{
+            items:1,
+            nav: false
+          },
+          600:{
+            items:2,
+            nav: false
+          },
+          1000:{
+            items:3,
+            nav: false
+          }
+        }
+      });
+
+
+function pdf_con()
+{
+  var pdf_link = 'https://api.html2pdf.app/v1/generate?url='+window.location.href+'&apiKey=GtoLgHCvCghsoyoRMEd5ITn7yyk5U4N7DGooToBOaNwZUtu0WeIpclxDMvS5gegO';
+  console.log(pdf_link);
+  
+  fetch (pdf_link)
+    .then(window.open(pdf_link));
+}
+
+if ('serviceWorker' in navigator){
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script >
+</body>
+</html>
