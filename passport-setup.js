@@ -12,8 +12,8 @@ passport.deserializeUser(function(user, done) {
 });
 
 passport.use(new GoogleStrategy({
-    clientID: "987779556626-l8iqqbtjh0oiogd323jfliceh9uo862t.apps.googleusercontent.com",
-    clientSecret: "rbOvoVoBRji_UmTpI-YYD93k",
+    clientID: "1029920867014-s3en2rgnlk41gcga2kl9tno8dinn22rh.apps.googleusercontent.com",
+    clientSecret: "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",
     callbackURL: "https://infinite-springs-51898.herokuapp.com/google/callback",
     passReqToCallback: true
   },
